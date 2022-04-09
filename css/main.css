@@ -58,7 +58,7 @@ h1 a {
   padding: 8px;
 }
 
-.complete {
+input.complete {
   flex-shrink: 0;
 }
 
