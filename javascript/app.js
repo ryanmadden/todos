@@ -52,14 +52,25 @@ const firebaseUiConfig = {
   // Your privacy policy url.
   privacyPolicyUrl: "https://example.com/privacy",
 };
-firebase.auth().onAuthStateChanged((firebaseUser) => {
+firebase.auth().onAuthStateChanged(async (firebaseUser) => {
   if (firebaseUser) {
     currentUser = firebaseUser.uid;
+    const role = await getCustomClaimRole();
+    if (role !== "basic" && role !== "premium") {
+      window.location.href = "/todos/account";
+      return;
+    }
     startDataListeners();
   } else {
     window.location.href = "/todos/account";
   }
 });
+
+async function getCustomClaimRole() {
+  await firebase.auth().currentUser.getIdToken(true);
+  const decodedToken = await firebase.auth().currentUser.getIdTokenResult();
+  return decodedToken.claims.stripeRole;
+}
 
 /**
  * Data listeners
