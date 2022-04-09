@@ -44,7 +44,7 @@ const firebaseUiConfig = {
     },
   },
   signInFlow: "popup",
-  signInSuccessUrl: "./account.html",
+  signInSuccessUrl: "/todos/account",
   signInOptions: [firebase.auth.EmailAuthProvider.PROVIDER_ID],
   credentialHelper: firebaseui.auth.CredentialHelper.NONE,
   // Your terms of service url.
@@ -205,7 +205,10 @@ document
     window.location.assign(data.url);
   });
 
-  // Open app handler
-  document
+// Open app handler
+document
   .querySelector("#todos-button")
-  .addEventListener("click", async (event) => window.location.href = '/app.html');
+  .addEventListener(
+    "click",
+    async (event) => (window.location.href = "/todos/app")
+  );

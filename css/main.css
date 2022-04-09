@@ -58,6 +58,10 @@ h1 a {
   padding: 8px;
 }
 
+.complete {
+  flex-shrink: 0;
+}
+
 .todo-text {
   margin: 0 4px;
 }
