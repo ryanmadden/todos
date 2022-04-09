@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <section id="firebaseui-auth-container">
+      <div id="loader">Loading &hellip;</div>
+    </section>
+    <main>
+      <section class="header">
+        <h1><a href="/">📝 Todo</a></h1>
+        <div class="actions">
+          <a href="/account.html" id="account">Account</a>
+        </div>
+      </section>
+      <section class="todos"></section>
+      <form id="todo-form" class="todo">
+        <input id="text" name="text" placeholder="New task..."></input>
+        <button type="submit" class="add-button">➕</button>
+      </form>
+    </main>
+
+    <template id="todo">
+      <div class="todo">
+        <input type="checkbox" class="complete" data-todo-id="">
+        <span class="todo-text"></span>
+        <button class="delete-button" data-todo-id="">🗑️</button>
+      </div>
+    </template>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-functions.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
+    />
+
+    <!-- Add Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <!-- Application Code -->
+    <script src="javascript/app.js"></script>
+  </body>
+</html>

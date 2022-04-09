@@ -1,0 +1,167 @@
+body {
+  background-color: #f5f9fc;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5vw;
+}
+
+header a {
+  color: #0e0e0e;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+#signout {
+  display: none;
+}
+
+#signout,
+#billing-portal-button,
+#todos-button {
+  text-decoration: none;
+  color: white;
+  background: mediumaquamarine;
+  border-radius: 40px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+main {
+  display: none;
+  margin: 4rem auto 6rem;
+  max-width: 650px;
+  width: 90vw;
+}
+
+#firebaseui-auth-container {
+  font-weight: 800;
+  margin: 4rem auto 6rem;
+  max-width: 650px;
+  text-align: center;
+  width: 90vw;
+}
+
+#subscribe {
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+}
+
+.color {
+  color: mediumaquamarine;
+}
+
+.products {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 3rem;
+}
+
+.product {
+  border: 1px solid #efeff4;
+  border-radius: 4px;
+  text-align: center;
+  height: 216px;
+}
+
+.product h2,
+.product .description {
+  text-transform: lowercase;
+}
+.product h2 {
+  margin: 10px 6px 0;
+}
+
+.product .description {
+  color: #9b9b9b;
+}
+
+#price {
+  font-size: 30px;
+}
+
+.currency {
+  color: #9b9b9b;
+  font-size: 12px;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25rem;
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+}
+
+.product button {
+  text-decoration: none;
+  border: 1px solid #6c6cff;
+  color: #6c6cff;
+  border-radius: 4px;
+  background: white;
+  padding: 8px 16px;
+  font-weight: normal;
+  font-size: 14px;
+  margin: 10px auto;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delete-button {
+  display: inline;
+}
+
+select {
+  transition: box-shadow 0.2s ease;
+  background: none;
+  border: 5px solid #fbc02e;
+  font-size: 1.25rem;
+}
+
+label {
+  display: block;
+}
+
+#subscribe,
+#my-subscription {
+  display: none;
+}
+
+/* Test card number */
+.test-card-notice {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+.card-number {
+  display: inline;
+  white-space: nowrap;
+  font-family: Menlo, Consolas, monospace;
+  color: #3c4257;
+  font-weight: 500;
+}
+.card-number span {
+  display: inline-block;
+  width: 4px;
+}
