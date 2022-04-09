@@ -201,7 +201,7 @@ document
       .app()
       .functions(functionLocation)
       .httpsCallable("ext-firestore-stripe-payments-createPortalLink");
-    const { data } = await functionRef({ returnUrl: window.location.origin });
+    const { data } = await functionRef({ returnUrl: window.location.href });
     window.location.assign(data.url);
   });
 
