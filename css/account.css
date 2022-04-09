@@ -69,6 +69,7 @@ main {
 }
 
 .product {
+  background: white;
   border: 1px solid #efeff4;
   border-radius: 4px;
   text-align: center;
