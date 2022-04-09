@@ -57,7 +57,7 @@ firebase.auth().onAuthStateChanged((firebaseUser) => {
     currentUser = firebaseUser.uid;
     startDataListeners();
   } else {
-    window.location.href = "/todos/app";
+    window.location.href = "/todos/account";
   }
 });
 
