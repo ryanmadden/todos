@@ -174,8 +174,8 @@ async function subscribe(event) {
     .add({
       price: priceId,
       allow_promotion_codes: true,
-      success_url: window.location.origin,
-      cancel_url: window.location.origin,
+      success_url: window.location.href,
+      cancel_url: window.location.href,
     });
 
   // Wait for the CheckoutSession to get attached by the extension
